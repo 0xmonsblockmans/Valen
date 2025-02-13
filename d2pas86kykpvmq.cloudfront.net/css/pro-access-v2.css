@@ -1,0 +1,151 @@
+:root {
+  --white: white;
+  --black: black;
+}
+
+::-moz-selection { 
+  color: black;
+  background: #ff0037;
+}
+
+::selection {
+  color: black;
+  background: #ff0037;
+}
+
+.pro-popup-wrapper {
+  z-index: 11;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  pointer-events: none;
+}
+
+.pro-popup {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px 30px;
+  display: none;
+  position: relative;
+  pointer-events: auto;
+}
+
+.pro-button {
+  cursor: pointer;
+  background-color: #000;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  min-width: 140px;
+  height: 40px;
+  margin-left: 30px;
+  display: flex;
+  opacity: 1;
+}
+
+.pro-button:hover {
+  opacity: .85;
+}
+
+.pro-popup-text {
+  color: #000;
+  font-family: Euclidcircularb, sans-serif;
+  font-size: 18px;
+}
+
+.pro-popup-text.white {
+  color: #fff;
+}
+
+.pro-popup-left {
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.pro-popup-icon {
+  margin-right: 6px;
+}
+
+.pro-popup-close {
+  cursor: pointer;
+  margin-top: 3px;
+  margin-right: 2px;
+  padding: 3px;
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: auto;
+  right: 0%;
+}
+
+@media screen and (max-width: 991px) {
+  .pro-popup-wrapper {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .pro-popup-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pro-popup {
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .pro-button {
+    margin-left: 12px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .pro-popup {
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .pro-button {
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  .pro-popup-close {
+    width: 18px;
+    margin-top: 7px;
+    margin-right: 6px;
+    padding: 0;
+  }
+
+  .pro-popup-right {
+    width: 100%;
+    padding-left: 29px;
+  }
+}
+
+@font-face {
+  font-family: 'Euclidcircularb';
+  src: url('https://d2pas86kykpvmq.cloudfront.net/fonts/EuclidCircularB-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
